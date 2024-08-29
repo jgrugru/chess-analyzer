@@ -1,0 +1,29 @@
+[project]
+name = "chess-analyzer"
+version = "0.0.1"
+description = ""
+requires-python = ">=3.11"
+dependencies = [
+    "chess",
+    "ipykernel>=6.29.5",
+    "pip>=24.2",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "ruff>=0.6.1",
+    "black>=24.8.0",
+    "mypy>=1.11.1",
+    "isort>=5.13.2",
+    "pytest>=8.3.2",
+    "ease-of-use-scripts>=0.0.7",
+]
+
+upgrade-package = ["ease-of-use-scripts"]
+
+[tool.uv.sources]
+ease-of-use-scripts = { git = "https://github.com/PWCAPTION/ease-of-use-scripts.git" }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
